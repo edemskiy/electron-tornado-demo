@@ -1,0 +1,14 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "electron fetch data app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Alexander Edemsky",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^7.1.2"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body style="text-align: center;">
+    <h1 id="title">No data yet</h1>
+    <button id="getDataBtn" style="padding: 10px; font-size: 18px;">
+      Get data
+    </button>
+
+    <script>
+      const title = document.getElementById("title");
+      const btn = document.getElementById("getDataBtn");
+
+      btn.addEventListener("click", () => {
+        fetch("http://localhost:5000")
+          .then(res => res.json())
+          .then(data => (title.innerText = data.data))
+          .catch(err => (title.innerText = err.message));
+      });
+    </script>
+  </body>
+</html>
