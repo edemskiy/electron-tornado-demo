@@ -10,14 +10,16 @@
     </button>
 
     <script>
-      const title = document.getElementById("title");
-      const btn = document.getElementById("getDataBtn");
+      window.addEventListener("load", () => {
+        const title = document.getElementById("title");
+        const btn = document.getElementById("getDataBtn");
 
-      btn.addEventListener("click", () => {
-        fetch("http://localhost:5000")
-          .then(res => res.json())
-          .then(data => (title.innerText = data.data))
-          .catch(err => (title.innerText = err.message));
+        btn.addEventListener("click", () => {
+          fetch("http://localhost:5000")
+            .then(res => res.json())
+            .then(data => (title.innerText = data.data))
+            .catch(err => (title.innerText = err.message));
+        });
       });
     </script>
   </body>
