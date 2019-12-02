@@ -1,8 +1,6 @@
 const electron = require("electron");
 const path = require("path");
-const { app, BrowserWindow, ipcMain } = electron;
-
-process.env.NODE_ENV = "development";
+const { app, BrowserWindow } = electron;
 
 let mainWindow;
 
@@ -17,11 +15,5 @@ app.on("ready", () => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
-  }
-});
-
-app.on("activate", () => {
-  if (mainWindow === null) {
-    createWindow();
   }
 });
