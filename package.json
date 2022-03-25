@@ -9,6 +9,6 @@
   "author": "Alexander Edemsky",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.1.2"
+    "electron": "^13.6.6"
   }
 }
